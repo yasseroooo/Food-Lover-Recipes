@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normlize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <!-- ==============================================      loading screen code        =================-->
+    <div class="loading-screen">
+        <div class="scene">
+            <div class="shadow"></div>
+            <div class="jumper">
+                <div class="spinner">
+                    <div class="scaler">
+                        <div class="loader">
+                            <div class="cuboid">
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                                <div class="cuboid__side"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- =============================================        side navbar          ================== -->
+    <div class="navbar-side min-vh-100 d-flex position-fixed">
+        <div class="blacknav min-vh-100">
+            <div class="uls">
+                <ul>
+                    <li id="search">Search</li>
+                    <li id="Categories">Categories</li>
+                    <li id="Area">Area</li>
+                    <li id="Ingredients">Ingredients</li>
+                    <li id="Contact">Contact Us</li>
+                </ul>
+            </div>
+            <div class="foot ps-4 pb-3">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <p>&copy; 2019 All Rights Reserved.</p>
+            </div>
+        </div>
+        <div class="whitenav min-vh-100 d-flex flex-column justify-content-between">
+            <img class="pt-4" src="img/logo.png" alt="">
+            <div class="open m-auto">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <div class="mb-4 d-flex flex-column ps-2">
+                <i class="pb-2 fas fa-share-alt"></i>
+                <i class="fas fa-globe-americas"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==============================================       Random recipe page      ======================= -->
+    <div class="container pt-5 mt-3 ">
+        <div class="randomMeals mt-3 d-none row row-gap-3 overflow-hidden row-cols-1 row-cols-sm-2 row-cols-md-3">
+
+        </div>
+    </div>
+    <!-- ==============================================       details meals recipe     ========== -->
+    <div class="container ">
+        <div class="row displaySpecific d-none" style="cursor: pointer;">
+
+        </div>
+    </div>
+    <!-- ==============================================           search          ========== -->
+    <div class="searchpage input-group position-absolute top-0 d-none ">
+        <input id="searchByLetter" type="text"
+            class=" input-group-sm bg-black border border-2 border-white m-2 rounded rounded-1  ps-4"
+            placeholder="Search By First Letter" maxlength="1">
+        <input id="searchByName" type="text"
+            class=" input-group-sm bg-black border border-2 border-white m-2 rounded rounded-1 ps-4"
+            placeholder="Search By Name">
+    </div>
+    <!-- ==============================================       category page      ======================= -->
+    <div class="container  ">
+        <div class="foodCategory d-none mt-3  row row-gap-3 overflow-hidden row-cols-1 row-cols-sm-2 row-cols-md-3">
+
+        </div>
+    </div>
+    <div class="container  ">
+        <div class="foodCategorydeep d-none mt-3 row row-gap-3 overflow-hidden row-cols-1 row-cols-sm-2 row-cols-md-3">
+
+        </div>
+    </div>
+    <div class="container position-absolute top-0 pt-4 mt-4 m-auto ">
+        <div class="foodArea d-none mt-3 row row-gap-3 overflow-hidden row-cols-1 row-cols-sm-2 row-cols-md-3">
+
+
+        </div>
+    </div>
+    <div class="container ">
+        <div class="foodAreadeep d-none mt-3  row row-gap-3 overflow-hidden row-cols-1 row-cols-sm-2 row-cols-md-3">
+
+        </div>
+    </div>
+    <div class="container position-absolute top-0 pt-4 mt-4 m-auto ">
+        <div class="foodIngredients d-none mt-3 row row-gap-3 overflow-hidden row-cols-1 row-cols-sm-2 row-cols-md-3">
+
+
+        </div>
+    </div>
+    <div class="container ">
+        <div
+            class="foodIngredientsdeep d-none mt-3  row row-gap-3 overflow-hidden row-cols-1 row-cols-sm-2 row-cols-md-3">
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row py-5 g-4 d-none" id="rowData">
+            <div class="contact min-vh-100 d-flex justify-content-center align-items-center">
+                <div class="container w-75 text-center">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <input id="nameInput" type="text" class="form-control" placeholder="Enter Your Name">
+                            <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                Special characters and numbers not allowed
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="emailInput" type="email" class="form-control " placeholder="Enter Your Email">
+                            <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                Email not valid *exemple@yyy.zzz
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="phoneInput" type="text" class="form-control " placeholder="Enter Your Phone">
+                            <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                Enter valid Phone Number
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="ageInput" type="number" class="form-control " placeholder="Enter Your Age">
+                            <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                Enter valid age
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="passwordInput" type="password" class="form-control "
+                                placeholder="Enter Your Password">
+                            <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                Enter valid password *Minimum eight characters, at least one letter and one number:*
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="repasswordInput" type="password" class="form-control " placeholder="Repassword">
+                            <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                Enter valid repassword
+                            </div>
+                        </div>
+                        <button id="submitBtn" class="col-md-3 text-center m-auto btn btn-outline-danger px-2 mt-3"
+                            disabled="true">Submit</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
